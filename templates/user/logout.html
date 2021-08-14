@@ -1,0 +1,13 @@
+{% extends 'user/user_base.html' %}
+{% load static %}
+{% block title %}ログアウト{% endblock %}
+{% block content %}
+<main class="form-signin">
+    <form method="post">
+        {% csrf_token %}
+        <h1 class="h3 mb-3 fw-normal">ログアウト</h1>
+        <h5>ログアウトしました</h5>
+        <a href="{% url 'login'%}" class="w-100 btn btn-lg btn-primary" type="submit">ログイン</a>
+    </form>
+</main>
+{% endblock %}
